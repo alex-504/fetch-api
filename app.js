@@ -5,3 +5,8 @@ fetch('https://jsonplaceholder.typicode.com/users')
 .then(function (data) {
   console.log(data);
 })
+
+// if the promise throws error
+.catch(function (error) {
+  console.log('There was an error, error');
+})
