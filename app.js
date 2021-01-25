@@ -1,12 +1,13 @@
 fetch('https://jsonplaceholder.typicode.com/users')
-.then(function(response) {
-  return response.json(); //convert this response to json -->  // promise
-})
-.then(function (data) {
+.then(response => response.json()) // one line only!
+
+//convert this response to json -->  // *promise
+// if promise fulfills
+.then(data => {
   console.log(data);
 })
 
 // if the promise throws error
-.catch(function (error) {
+.catch(error => {
   console.log('There was an error, error');
 })
